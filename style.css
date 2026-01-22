@@ -82,6 +82,8 @@ hr{
     max-width: 1300px;
     margin: auto;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .header-inside-container{
@@ -185,7 +187,7 @@ hr{
 .proof-section{
     max-width: 1300px;
     margin: auto;
-    height: 80vh;
+    height: 100%;
     padding: 30px;
 }
 
@@ -306,12 +308,13 @@ hr{
 }
 
 .section2-main-container{
-    height: 80vh;
+    height: 100vh;
     background-color: #E5E5E5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .section2-top{
@@ -319,6 +322,7 @@ hr{
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    margin-top: 20px;
 }
 
 .section2-top-h1{
@@ -329,4 +333,354 @@ hr{
     font-size: large;
     font-weight: 400;
     color:#4E657F
+}
+
+.carousel{ 
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel-card{
+    scroll-snap-align: start;
+    flex: 0 0 25em;
+    height: 18em;
+    width: 10em;
+    background-color: #F4F4F4;
+    padding: 20px;
+    border-radius: .5em;
+    align-content: start;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.round-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color:#00AC92;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E6E7EB;
+}
+
+.horizontal-line{
+    width: 50px;
+    height: 2px;
+    background-color: #00AC92;
+    margin: 10px 0px;
+}
+
+.carousel::scroll-button(right), .carousel::scroll-button(left){
+    content: url(./public/arrow-right.svg);
+    border: none;
+    background-color: #454545;
+    font-size: 2rem;
+    color: white;
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -50%;
+    
+}
+
+.carousel::scroll-button(left){
+    content: url(./public/arrow-left.svg);
+    position-area: left center;
+    translate: 50%;
+}
+.carousel-p{
+    font-weight: 300;
+    color: #4C5665;
+}
+
+/* Section-3 */
+
+.section-3{
+    max-width: 1300px;
+    margin: auto;
+    background-color: #001958;
+}
+
+.card-img{
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.card{
+    background-color: white;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-h2{
+    margin: 20px 0px;
+    font-size: larger;
+}
+
+.card-p{
+    margin: 20px 0px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #4A5565;
+}
+
+.card-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rate-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px; 
+}
+
+.main-price{
+    font-size: 25px;
+    
+}
+
+.previous-price{
+    font-size: 20px;
+}
+
+.card-button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #001958;
+    color: white;
+}
+
+.cards-main-heading{
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    height: auto;
+    font-size: x-large;
+    color: white;
+
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px;
+}
+
+@media screen and (width<=350) {
+    .cards-main-heading{
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+    font-size: large;
+    color: white;
+
+}
+}
+
+/* Section-4 */
+
+.section-4{
+    max-width: 1300px;
+    margin: auto;
+    height: 100%;
+    padding: 100px 0px;
+}
+
+.section-4-main-container{
+    background-color: #001958;
+    height: 100%;
+    padding: 60px 0px;
+    border-radius: 20px;
+}
+
+.section-4-header{
+    color: white;
+    padding: 40px 20px;
+}
+
+.section-4-header h1{
+    font-size: 40px;
+}
+
+.section-4-header p{
+    max-width: 600px;
+    font-size: medium;
+    font-weight: 300;
+    padding: 25px 0px;
+    line-height: 150%;
+}
+
+.card-1-holder{
+    width: 300px;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-1-holder img{
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-1 p{
+    padding: 20px 0px;
+    color: #4A5565;
+    font-size: medium;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.section-4-card{
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section-5{
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-5-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #202435, #31539C);
+    color: white;
+    padding: 50px 50px 0px 50px;
+    border-radius: 20px;
+}
+
+.s5-left{
+    padding: 20px;
+}
+
+.s5-left h1{
+    font-size: 50px;
+}
+
+.s5-left ul{
+    padding: 20px 10px;
+    list-style:circle;
+    line-height: 200%;
+}
+
+.s5-right img{
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+}
+
+@media screen and (width<=1024px) {
+    .section-5-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #202435, #31539C);
+    color: white;
+    padding: 50px 50px 0px 50px;
+}
+
+.s5-left h1{
+    font-size: 30px;
+}
+}
+
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+}
+
+/* FAQ */
+
+.faq{
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 0px;
+}
+
+.faq-main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    width: 100%;
+}
+
+.faq-heading{
+    text-align: center;
+    font-size: xx-large;
+    color: #000F49;
+}
+
+.faq-heading p{
+    font-size: medium;
+    padding: 20px 0px;
+    font-weight: 300;
+    color: #000F49;
+}
+
+
+.list-div{
+    width: 100%;
+    padding: 40px;
+    line-height: 350%;
+    font-size: large;
+    font-weight: 350;
+    color: #000F49;
+}
+.list-div ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }

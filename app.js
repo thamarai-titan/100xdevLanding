@@ -29,3 +29,29 @@ class CustomButton extends HTMLElement {
 }
 
 customElements.define('custom-button',CustomButton)
+
+
+class CustomCard extends HTMLElement {
+    constructor() {
+        super()
+        this.attachShadow({mode:'open'})
+    }
+
+    connectedCallback(){
+        this.render();
+    }
+
+    render(){
+        const imagePath = this.getAttribute('imagePath')
+        const title = this.getAttribute('title')
+        const description = this.getAttribute('description')
+        const oldRate = this.getAttribute('oldRate')
+        const newRate = this.getAttribute('newRate')
+
+        this.shadowRoot.innerHTML = `
+        
+        
+
+        `
+    }
+}
